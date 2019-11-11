@@ -3,8 +3,7 @@ import { LitElement, html, customElement, property } from 'lit-element'
 @customElement('child-element')
 export class Child extends LitElement {
 
-    @property({ type: Object })
-    private data = { name: 'antoine' };
+    @property({ type: Object }) data;
 
     constructor() {
         super();

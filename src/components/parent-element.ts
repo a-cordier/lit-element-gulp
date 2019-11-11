@@ -5,12 +5,11 @@ import './child-element';
 @customElement('parent-element')
 export class Parent extends LitElement {
 
-    @property({ type: Object })
-    private data = { name: 'Anton' };
+    @property({ type: Object }) data = { name: 'World!' };
 
     constructor() {
         super();
-        setTimeout(() => this.data = { name: 'universe!' }, 1000)
+        setTimeout(() => this.data = { name: 'Lille!' }, 1000)
     }
 
     connectedCallback(): void {
