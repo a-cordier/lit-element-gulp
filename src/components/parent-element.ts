@@ -1,24 +1,24 @@
-import {LitElement, html, customElement, TemplateResult, property} from 'lit-element';
+import {LitElement, html, css, customElement, property} from 'lit-element';
 
 import './child-element';
 
 @customElement('parent-element')
 export class Parent extends LitElement {
 
-    @property({ type: Object }) data = { name: 'World!' };
+
 
     constructor() {
         super();
-        setTimeout(() => this.data = { name: 'Lille!' }, 1000)
     }
 
-    connectedCallback(): void {
+    connectedCallback() {
         super.connectedCallback();
     }
 
-    protected render(): TemplateResult {
+    protected render() {
         return html`
-            <child-element .data=${this.data}></child-element>
+            <child-element></child-element>
         `
     }
+
 }
